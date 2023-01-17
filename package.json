@@ -1,0 +1,41 @@
+{
+  "name": "analysis-news-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "seconddim",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "start:dev": "NODE_ENV=development nodemon --watch src -e ts,tsx --exec ts-node src/server.ts",
+    "lint": "eslint . src/**/*",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -r dist; tsc"
+  },
+  "dependencies": {
+    "axios": "^1.2.2",
+    "cron": "^2.2.0",
+    "dotenv": "^16.0.3",
+    "ioredis": "^5.2.4",
+    "koa": "^2.14.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-favicon": "^2.1.0",
+    "koa-jwt": "^4.0.4",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0",
+    "koa-swagger-decorator": "^1.8.6",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/cron": "^2.0.0",
+    "@types/koa": "^2.13.5",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/koa-favicon": "^2.0.21",
+    "@types/koa-mount": "^4.0.2",
+    "@types/koa-static": "^4.0.2",
+    "eslint-config-standard-with-typescript": "^26.0.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
